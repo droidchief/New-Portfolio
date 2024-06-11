@@ -2,7 +2,8 @@ import { m } from "framer-motion";
 import LinkWrapper from "./LinkWrapper";
 
 const Desktop = () => {
-  const linkArray = ["home", "about", "projects"];
+  const linkArray = ["home", "about"];
+  // const linkArray = ["home", "about", "projects"];
   return (
     <m.div
       className="flex items-center space-x-8 h-[5.375rem]"
