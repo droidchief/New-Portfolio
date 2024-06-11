@@ -5,7 +5,6 @@ import { aboutVariant } from "../../../variants/aboutVariant";
 const AboutItems = () => {
   return (
     <>
-      {" "}
       <div className="flex flex-col items-center justify-center lg:flex-row lg:space-x-10 ">
         {/* text */}
         <div className="text lg:flex-[45%]">
