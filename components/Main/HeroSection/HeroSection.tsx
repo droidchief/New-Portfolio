@@ -63,7 +63,7 @@ const HeroSection = () => {
               transition: { duration: 0.3, delay: 0.8 },
             }}
           >
-            I'm a{" "}
+            I&apos;m a{" "}
             <span className="text-cyan">
               {" "}
               Mobile Developer with over 5 years
@@ -71,13 +71,13 @@ const HeroSection = () => {
             of professional experience and a great stack of success. I have been
             building software solutions for EduTech, Health Care, Fintech, and
             Businesses for the past five (5) years, and also possess vast
-            knowledge of software development and project management. I'm adept
-            at bringing all team members together to reach a common goal on time
-            and under budget, conceptualizing software solutions with the best
-            technology, design theory, and a large dose of creativity. I have
-            helped many new programmers (virtually and physically) become
-            proficient in their chosen programming language. I'm committed to
-            viable and easily functional software solutions for clients.
+            knowledge of software development and project management. I&apos;m
+            adept at bringing all team members together to reach a common goal
+            on time and under budget, conceptualizing software solutions with
+            the best technology, design theory, and a large dose of creativity.
+            I have helped many new programmers (virtually and physically) become
+            proficient in their chosen programming language. I&apos;m committed
+            to viable and easily functional software solutions for clients.
           </m.p>
         </div>
         {/* buttons */}

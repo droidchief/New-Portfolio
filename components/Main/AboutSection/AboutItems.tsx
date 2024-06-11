@@ -30,7 +30,7 @@ const AboutItems = () => {
               whileInView={aboutVariant.p1}
               viewport={{ once: true }}
             >
-              I'm a Mobile Developer with over 5 years of professional
+              I&apos;m a Mobile Developer with over 5 years of professional
               experience and a great stack of success. I have been building
               software solutions for EduTech, Health Care, Fintech, and
               Businesses for the past five (5) years, and also possess vast
@@ -43,10 +43,10 @@ const AboutItems = () => {
               whileInView={aboutVariant.p2}
               viewport={{ once: true }}
             >
-              I'm adept at bringing all team members together to reach a common
-              goal on time and under budget, conceptualizing software solutions
-              with the best technology, design theory, and a large dose of
-              creativity.
+              I&apos;m adept at bringing all team members together to reach a
+              common goal on time and under budget, conceptualizing software
+              solutions with the best technology, design theory, and a large
+              dose of creativity.
             </m.p>
             <m.p
               className="mb-6 text-lg font-normal text-text lg:text-xl"
@@ -56,7 +56,7 @@ const AboutItems = () => {
               viewport={{ once: true }}
             >
               I have helped many new programmers (virtually and physically)
-              become proficient in their chosen programming language. I'm
+              become proficient in their chosen programming language. I&apos;m
               committed to viable and easily functional software solutions for
               clients.
             </m.p>
