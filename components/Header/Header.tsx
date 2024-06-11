@@ -1,22 +1,22 @@
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import { Desktop, Mobile } from "../Navigation/index"
-import { AnimatePresence, m } from "framer-motion"
-import { Download } from "../Main/icons"
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Desktop, Mobile } from "../Navigation/index";
+import { AnimatePresence, m } from "framer-motion";
+import { Download } from "../Main/icons";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const handleMenuToggle = () => {
-    isOpen === true ? setIsOpen(!isOpen) : setIsOpen(!isOpen)
-  }
+    isOpen === true ? setIsOpen(!isOpen) : setIsOpen(!isOpen);
+  };
   useEffect(() => {
-    const body = document.querySelector("body")
+    const body = document.querySelector("body");
 
     isOpen === true
       ? body?.classList.add("no-scroll")
-      : body?.classList.remove("no-scroll")
-  }, [isOpen])
+      : body?.classList.remove("no-scroll");
+  }, [isOpen]);
 
   return (
     <header className="flex items-center justify-center  w-full h-16 md:h-20 lg:h-[5rem] bg-body/80 -mb-[1px] fixed top-0 left-0 z-50 shadow-lg px-6 md:px-10 lg:px-14 backdrop-blur-md">
@@ -47,7 +47,11 @@ const Header = () => {
               initial={{ y: -100 }}
               animate={{ y: 0, transition: { duration: 0.3, delay: 0.1 } }}
             >
-              <Link href={`https://docs.google.com/document/d/1mWh65035Tcg1RFk-FHXDbOZ7TFHqjc7P-SuRcjNEqO8`} target="_blank" rel="noreferrer">
+              <Link
+                href={`https://media.publit.io/file/victor-loveday.pdf`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="mr-3 text-base font-normal tracking-wide text-white capitalize group:hover:mr-1">
                   resume
                 </span>
@@ -82,7 +86,7 @@ const Header = () => {
         </AnimatePresence>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

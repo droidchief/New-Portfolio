@@ -52,7 +52,7 @@ const Mobile = ({ handleMenuToggle }: Props) => {
               className={`flex items-center justify-center rounded-md px-5 h-11 bg-buttonBg  hover:bg-cyan duration-300 group cursor-pointer`}
             >
               <Link
-                href={`https://docs.google.com/document/d/1mWh65035Tcg1RFk-FHXDbOZ7TFHqjc7P-SuRcjNEqO8`}
+                href={`https://media.publit.io/file/victor-loveday.pdf`}
                 target="_blank"
                 rel="noreferrer"
               >
