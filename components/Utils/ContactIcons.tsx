@@ -52,7 +52,7 @@ const ContactIcons = () => {
         <div className="list-none after:block after:h-24 after:w-[2px] after:mx-auto after:bg-white after:mt-20 ">
           <div className="md:rotate-90">
             <Link
-              href={`mailto:xeuxdev@gmail.com`}
+              href={`mailto:lovedayv7@gmail.com`}
               className="text-sm font-semibold duration-200 text-text hover:text-cyan font-pop "
             >
               lovedayv7@gmail.com

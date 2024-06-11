@@ -30,10 +30,11 @@ const About: NextPage = () => {
                 className="mb-4 text-2xl font-semibold tracking-wide text-white capitalize lg:text-4xl"
                 id="heading"
               >
-                technologies that i use
+                technologies & languages i use
               </h2>
               <p className="text-lg text-text">
-                Here are some technologies i am using or have used recently
+                Here are some of the technologies & langauges I use in my
+                day-to-day job
               </p>
             </m.div>
             {/* techs */}
