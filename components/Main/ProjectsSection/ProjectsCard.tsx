@@ -1,19 +1,19 @@
-import { m } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { projectVariant } from "../../../variants/projectVariant"
-import Github from "../../Utils/icons/Github"
-import LiveLink from "./icon/LiveLink"
+import { m } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { projectVariant } from "../../../variants/projectVariant";
+import Github from "../../Utils/icons/Github";
+import LiveLink from "./icon/LiveLink";
 
 export type ProjectCardprops = {
-  image: string
-  name: string
-  about: string
-  link: string
-  liveLink: string
-  builtWith: string[]
-  orientation: number
-}
+  image: string;
+  name: string;
+  about: string;
+  link: string;
+  liveLink: string;
+  builtWith: string[];
+  orientation: number;
+};
 
 const ProjectsCard = ({
   about,
@@ -44,7 +44,7 @@ const ProjectsCard = ({
             }`}
             target="_blank"
           >
-            <Image src={`/${image}`} alt={`${name} image`} fill priority />
+            {/* <Image src={`/${image}`} alt={`${name} image`} fill priority /> */}
           </Link>
         </div>
 
@@ -77,7 +77,7 @@ const ProjectsCard = ({
             ))}
           </div>
           <div className="flex items-center pt-5 pb-2 mt-5 space-x-4">
-            <Link
+            {/* <Link
               href={`${link}`}
               target="_blank"
               aria-label={`${name} github link`}
@@ -85,8 +85,8 @@ const ProjectsCard = ({
               <>
                 <Github />
               </>
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href={`${liveLink}`}
               target="_blank"
               aria-label={`${name} live link`}
@@ -94,12 +94,12 @@ const ProjectsCard = ({
               <>
                 <LiveLink />
               </>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
     </m.div>
-  )
-}
+  );
+};
 
-export default ProjectsCard
+export default ProjectsCard;

@@ -9,8 +9,8 @@ type Props = {
 };
 
 const Mobile = ({ handleMenuToggle }: Props) => {
-  const linkArray = ["home", "about"];
-  // const linkArray = ["home", "about", "projects"];
+  // const linkArray = ["home", "about"];
+  const linkArray = ["home", "about", "projects"];
   return (
     <m.div
       className="absolute top-0 right-0 z-50 w-3/4 h-screen overflow-hidden md:hidden bg-veryDark"

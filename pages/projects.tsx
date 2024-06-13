@@ -1,13 +1,13 @@
-import { m } from "framer-motion"
-import type { NextPage } from "next"
-import { HeadSection, PageTitle, ProjectsCard } from "../components"
-import { projectVariant } from "../variants/projectVariant"
-import projects from "../public/data/projects.json"
+import { m } from "framer-motion";
+import type { NextPage } from "next";
+import { HeadSection, PageTitle, ProjectsCard } from "../components";
+import { projectVariant } from "../variants/projectVariant";
+import projects from "../public/data/projects.json";
 
 const Projects: NextPage = () => {
   const random = () => {
-    return Math.floor(Math.random() * 2)
-  }
+    return Math.floor(Math.random() * 2);
+  };
   return (
     <>
       <HeadSection page="Projects" title="Portfolio - Project Page" />
@@ -23,7 +23,7 @@ const Projects: NextPage = () => {
               whileInView={projectVariant.heading}
               viewport={{ once: true }}
             >
-              Here are my personal projects
+              Here are some client projects I successfully built in the past.
             </m.h1>
           </section>
 
@@ -44,7 +44,7 @@ const Projects: NextPage = () => {
         </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
