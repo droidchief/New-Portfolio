@@ -32,10 +32,10 @@ const About: NextPage = () => {
               >
                 technologies & languages i use
               </h2>
-              <p className="text-lg text-text">
+              {/* <p className="text-lg text-text">
                 Here are some of the technologies & langauges I use in my
                 day-to-day job
-              </p>
+              </p> */}
             </m.div>
             {/* techs */}
             <Technologies />
