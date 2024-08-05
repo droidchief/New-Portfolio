@@ -29,11 +29,11 @@ const AboutItems = () => {
               whileInView={aboutVariant.p1}
               viewport={{ once: true }}
             >
-              I&apos;m a Mobile Developer with over 5 years of professional
-              experience and a great stack of success. I have been building
-              software solutions for EduTech, Health Care, Fintech, and
-              Businesses for the past five (5) years, and also possess vast
-              knowledge of software development and project management.
+              I&apos;m a Mobile Engineer with over 5 years of professional
+              experience, specializing in building software solutions for
+              EduTech, Health Care, Fintech, and Businesses. Proficient in Dart,
+              Kotlin, Java, and JavaScript, I possess extensive knowledge in
+              software development and project management.
             </m.p>
             <m.p
               className="mb-6 text-lg font-normal text-text lg:text-xl"
@@ -42,10 +42,10 @@ const AboutItems = () => {
               whileInView={aboutVariant.p2}
               viewport={{ once: true }}
             >
-              I&apos;m adept at bringing all team members together to reach a
-              common goal on time and under budget, conceptualizing software
-              solutions with the best technology, design theory, and a large
-              dose of creativity.
+              My expertise lies in uniting team members to achieve common goals
+              efficiently, conceptualizing innovative software solutions, and
+              integrating the best technology and design principles with
+              creativity.
             </m.p>
             <m.p
               className="mb-6 text-lg font-normal text-text lg:text-xl"
@@ -54,10 +54,11 @@ const AboutItems = () => {
               whileInView={aboutVariant.p2}
               viewport={{ once: true }}
             >
-              I have helped many new programmers (virtually and physically)
-              become proficient in their chosen programming language. I&apos;m
-              committed to viable and easily functional software solutions for
-              clients.
+              I have a passion for mentoring new programmers, helping them
+              become proficient in their chosen programming languages both
+              virtually and in person. I am dedicated to delivering viable and
+              functional software solutions that meet client needs and exceed
+              expectations.
             </m.p>
           </div>
         </div>
