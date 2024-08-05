@@ -68,10 +68,10 @@ const HeroSection = () => {
               {" "}
               Mobile Engineer with over 5 years of professional experience,
             </span>{" "}
-            specializing in building software solutions for EduTech, Health
-            Care, Fintech, and Businesses. Proficient in Dart, Kotlin, Java, and
-            JavaScript, I possess extensive knowledge in software development
-            and project management.
+            specializing in building software solutions for Fintech,
+            Transportation, Health Care, and Businesses. Proficient in Dart,
+            Kotlin, Java, and JavaScript, I possess extensive knowledge in
+            software development and project management.
           </m.p>
         </div>
         {/* buttons */}

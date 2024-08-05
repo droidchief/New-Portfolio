@@ -31,9 +31,10 @@ const AboutItems = () => {
             >
               I&apos;m a Mobile Engineer with over 5 years of professional
               experience, specializing in building software solutions for
-              EduTech, Health Care, Fintech, and Businesses. Proficient in Dart,
-              Kotlin, Java, and JavaScript, I possess extensive knowledge in
-              software development and project management.
+              Fintech, Transportation, EduTech, Health Care, and Businesses.
+              Proficient in Dart, Kotlin, Java, and JavaScript, I possess
+              extensive knowledge in software development and project
+              management.
             </m.p>
             <m.p
               className="mb-6 text-lg font-normal text-text lg:text-xl"
