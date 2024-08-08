@@ -91,20 +91,38 @@ const ProjectsCard = ({
             ))}
           </div>
           <div className="flex items-center pt-5 pb-2 mt-5 space-x-4">
-            <Link
-              href={`${link}`}
-              target="_blank"
-              aria-label={`${name} github link`}
-            >
-              <>
+            {link && (
+              <Link
+                href={link}
+                target="_blank"
+                aria-label={`${name} website link`}
+              >
                 <LiveLink />
-              </>
-            </Link>
+              </Link>
+            )}
 
-            <Link
+            {playStoreLink && (
+              <Link
+                href={playStoreLink}
+                target="_blank"
+                aria-label={`${name} website link`}
+              >
+                <PlayStore />
+              </Link>
+            )}
+            {appStoreLink && (
+              <Link
+                href={appStoreLink}
+                target="_blank"
+                aria-label={`${name} website link`}
+              >
+                <AppStore />
+              </Link>
+            )}
+            {/* <Link
               href={`${playStoreLink}`}
               target="_blank"
-              aria-label={`${name} live link`}
+              aria-label={`${name} play store link`}
             >
               <>
                 <PlayStore />
@@ -114,12 +132,12 @@ const ProjectsCard = ({
             <Link
               href={`${appStoreLink}`}
               target="_blank"
-              aria-label={`${name} live link`}
+              aria-label={`${name} app store link`}
             >
               <>
                 <AppStore />
               </>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
