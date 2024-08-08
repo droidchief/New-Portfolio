@@ -37,7 +37,8 @@ const Projects: NextPage = () => {
                 about={item.about}
                 contribution={item.contribution}
                 builtWith={item.builtWith}
-                liveLink={item.liveLink}
+                playStoreLink={item.playStoreLink}
+                appStoreLink={item.appStoreLink}
                 orientation={random()}
               />
             ))}

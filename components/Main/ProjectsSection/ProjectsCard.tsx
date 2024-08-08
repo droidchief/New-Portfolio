@@ -4,15 +4,18 @@ import Link from "next/link";
 import { projectVariant } from "../../../variants/projectVariant";
 import Github from "../../Utils/icons/Github";
 import LiveLink from "./icon/LiveLink";
+import PlayStore from "./icon/PlayStore";
+import AppStore from "./icon/AppStore";
 
 export type ProjectCardprops = {
   image: string;
   name: string;
   about: string;
   link: string;
-  liveLink: string;
+  playStoreLink: string;
+  appStoreLink: string;
   builtWith: string[];
-  contribution: string;
+  contribution: string[];
   orientation: number;
 };
 
@@ -21,7 +24,8 @@ const ProjectsCard = ({
   image,
   link,
   name,
-  liveLink,
+  playStoreLink,
+  appStoreLink,
   builtWith,
   contribution,
   orientation,
@@ -39,7 +43,7 @@ const ProjectsCard = ({
           className={`absolute inset-0 w-[20rem] h-[33rem] sm:h-[30rem] lg:top-1/2 lg:-translate-y-1/2 flex lg:items-start flex-col`}
         >
           <Link
-            href={`${liveLink}`}
+            href={`${link}`}
             className={`min-w-[20rem] w-[37rem] md:w-[50rem] lg:w-[42rem] h-[33rem] sm:h-[30rem] lg:h-[22rem] xl:h-[28rem] absolute  rounded-xl duration-300 cursor-pointer opacity-10 lg:opacity-25 hover:opacity-50 ${
               orientation === 1 ? "lg:left-0" : "lg:left-full"
             }`}
@@ -66,9 +70,16 @@ const ProjectsCard = ({
           <div className="py-5 mb-4 text-base font-normal text-white duration-300 rounded-lg shadow-xl md:bg-gray/90 lg:text-lg md:p-6 lg:px-7 lg:py-7 hover:shadow-2xl hover:-translate-y-1">
             {about}
           </div>
-          <div className="py-5 mb-4 text-base font-normal text-white duration-300 rounded-lg shadow-xl md:bg-gray/90 lg:text-lg md:p-6 lg:px-7 lg:py-7 hover:shadow-2xl hover:-translate-y-1">
-            {contribution}
+
+          <div className="py-5 mb-4 text-sm text-white duration-300 rounded-lg shadow-xl md:bg-gray/90 lg:text-base md:p-6 lg:px-7 lg:py-7 hover:shadow-2xl hover:-translate-y-1">
+            {contribution.map((item, index) => (
+              <p key={index} className="text-sm">
+                {item}
+              </p>
+            ))}
+            {/* <p className="text-sm">{contribution}</p> */}
           </div>
+
           <div className="flex flex-wrap items-center justify-center space-x-4 md:justify-start">
             {builtWith.map((item, index) => (
               <span
@@ -89,15 +100,26 @@ const ProjectsCard = ({
                 <LiveLink />
               </>
             </Link>
-            {/* <Link
-              href={`${liveLink}`}
+
+            <Link
+              href={`${playStoreLink}`}
               target="_blank"
               aria-label={`${name} live link`}
             >
               <>
-                <LiveLink />
+                <PlayStore />
               </>
-            </Link> */}
+            </Link>
+
+            <Link
+              href={`${appStoreLink}`}
+              target="_blank"
+              aria-label={`${name} live link`}
+            >
+              <>
+                <AppStore />
+              </>
+            </Link>
           </div>
         </div>
       </div>
