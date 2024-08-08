@@ -12,6 +12,7 @@ export type ProjectCardprops = {
   link: string;
   liveLink: string;
   builtWith: string[];
+  contribution: string;
   orientation: number;
 };
 
@@ -22,6 +23,7 @@ const ProjectsCard = ({
   name,
   liveLink,
   builtWith,
+  contribution,
   orientation,
 }: ProjectCardprops) => {
   return (
@@ -33,7 +35,6 @@ const ProjectsCard = ({
       viewport={{ once: true }}
     >
       <div className="max-w-5xl relative h-[33rem] sm:h-[30rem] lg:h-[22rem] xl:h-[28rem] flex flex-col overflow-hidden ">
-        {/* image */}
         <div
           className={`absolute inset-0 w-[20rem] h-[33rem] sm:h-[30rem] lg:top-1/2 lg:-translate-y-1/2 flex lg:items-start flex-col`}
         >
@@ -44,10 +45,9 @@ const ProjectsCard = ({
             }`}
             target="_blank"
           >
-            {/* <Image src={`/${image}`} alt={`${name} image`} fill priority /> */}
+            <Image src={`/${image}`} alt={`${name} image`} fill priority />
           </Link>
         </div>
-
         {/* text */}
         <div
           className={`${
@@ -66,6 +66,9 @@ const ProjectsCard = ({
           <div className="py-5 mb-4 text-base font-normal text-white duration-300 rounded-lg shadow-xl md:bg-gray/90 lg:text-lg md:p-6 lg:px-7 lg:py-7 hover:shadow-2xl hover:-translate-y-1">
             {about}
           </div>
+          <div className="py-5 mb-4 text-base font-normal text-white duration-300 rounded-lg shadow-xl md:bg-gray/90 lg:text-lg md:p-6 lg:px-7 lg:py-7 hover:shadow-2xl hover:-translate-y-1">
+            {contribution}
+          </div>
           <div className="flex flex-wrap items-center justify-center space-x-4 md:justify-start">
             {builtWith.map((item, index) => (
               <span
@@ -77,16 +80,16 @@ const ProjectsCard = ({
             ))}
           </div>
           <div className="flex items-center pt-5 pb-2 mt-5 space-x-4">
-            {/* <Link
+            <Link
               href={`${link}`}
               target="_blank"
               aria-label={`${name} github link`}
             >
               <>
-                <Github />
+                <LiveLink />
               </>
-            </Link> */}
-            <Link
+            </Link>
+            {/* <Link
               href={`${liveLink}`}
               target="_blank"
               aria-label={`${name} live link`}
@@ -94,7 +97,7 @@ const ProjectsCard = ({
               <>
                 <LiveLink />
               </>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
