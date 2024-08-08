@@ -86,7 +86,7 @@ const ProjectsCard = ({
                 <Github />
               </>
             </Link> */}
-            {/* <Link
+            <Link
               href={`${liveLink}`}
               target="_blank"
               aria-label={`${name} live link`}
@@ -94,7 +94,7 @@ const ProjectsCard = ({
               <>
                 <LiveLink />
               </>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>
