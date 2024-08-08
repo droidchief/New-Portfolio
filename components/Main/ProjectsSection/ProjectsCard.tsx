@@ -119,25 +119,6 @@ const ProjectsCard = ({
                 <AppStore />
               </Link>
             )}
-            {/* <Link
-              href={`${playStoreLink}`}
-              target="_blank"
-              aria-label={`${name} play store link`}
-            >
-              <>
-                <PlayStore />
-              </>
-            </Link>
-
-            <Link
-              href={`${appStoreLink}`}
-              target="_blank"
-              aria-label={`${name} app store link`}
-            >
-              <>
-                <AppStore />
-              </>
-            </Link> */}
           </div>
         </div>
       </div>
