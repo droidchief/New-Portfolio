@@ -6,7 +6,9 @@
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.gocaby.rider",
     "appStoreLink": "https://apps.apple.com/ng/app/gocaby-ride-delivery-grocery/id6444678067",
     "about": "GoCaby is your all-in-one app for enhancing your daily lifestyle. Whether you're booking a ride with our Go Ride feature, getting items delivered with ease, ordering your favorite food from nearby restaurants through Go Eat, or paying bills and sharing them with friends and family.",
-    "contribution": ["**Worked on the KYC verification"],
+    "contribution": [
+      "1. Built and shipped the KYC verification process \n 2.  Built the package delivery feature"
+    ],
     "builtWith": ["Flutter", "Dart", "Block", "Dio", "Firebase"]
   },
   {
