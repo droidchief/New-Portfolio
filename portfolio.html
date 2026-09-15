@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor — Senior Mobile Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #11141a;
+      --panel: #181c24;
+      --panel-alt: #1f242e;
+      --border: #2b313d;
+      --border-soft: #232935;
+      --text: #eef1f5;
+      --text-muted: #8992a3;
+      --text-dim: #5c6474;
+      --accent: #e39a3d;
+      --accent-dim: #a97430;
+      --maxw: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .num {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- NAV ---------- */
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(17, 20, 26, 0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    nav.wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(227, 154, 61, 0.15);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 28px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .navlinks a {
+      transition: color .15s ease;
+    }
+
+    .navlinks a:hover {
+      color: var(--text);
+    }
+
+    .navlinks {
+      display: none;
+    }
+
+    @media (min-width:760px) {
+      .navlinks {
+        display: flex;
+      }
+    }
+
+    /* ---------- HERO ---------- */
+    section.hero {
+      padding: 76px 0 64px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+
+    @media (min-width:900px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 56px;
+        align-items: start;
+      }
+    }
+
+    .kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.4vw, 3.1rem);
+      letter-spacing: -0.01em;
+      max-width: 14ch;
+    }
+
+    .hero p.lede {
+      margin-top: 20px;
+      color: var(--text-muted);
+      font-size: 1.08rem;
+      max-width: 52ch;
+    }
+
+    .hero-cta {
+      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.94rem;
+      font-weight: 500;
+      padding: 11px 20px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color .15s ease, background .15s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #1a1305;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: #efaa4f;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--text-dim);
+    }
+
+    /* console panel */
+    .console {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .console-head {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--text-dim);
+    }
+
+    .console-head .live {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #7fd08a;
+    }
+
+    .live .pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7fd08a;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(127, 208, 138, 0.4);
+      }
+
+      50% {
+        opacity: 0.6;
+        box-shadow: 0 0 0 5px rgba(127, 208, 138, 0);
+      }
+    }
+
+    .route-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: var(--panel-alt);
+    }
+
+    .route-path {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 2;
+      stroke-dasharray: 6 7;
+      animation: dash 3.6s linear infinite;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -130;
+      }
+    }
+
+    .route-node {
+      fill: var(--bg);
+      stroke: var(--accent);
+      stroke-width: 2;
+    }
+
+    .route-node.end {
+      fill: var(--accent);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .stat {
+      padding: 18px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:nth-child(2n) {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .stat-label {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* ---------- SECTION SCAFFOLD ---------- */
+    section.block {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .block-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width:760px) {
+      .block-head {
+        grid-template-columns: 260px 1fr;
+        align-items: baseline;
+        gap: 32px;
+      }
+    }
+
+    .block-head h2 {
+      font-size: 1.6rem;
+    }
+
+    .block-head .desc {
+      color: var(--text-muted);
+      max-width: 60ch;
+      font-size: 0.98rem;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-text {
+      max-width: 70ch;
+      font-size: 1.03rem;
+      color: #c7cbd3;
+    }
+
+    .about-text p+p {
+      margin-top: 16px;
+    }
+
+    /* ---------- EXPERIENCE (timeline) ---------- */
+    .timeline {
+      position: relative;
+      padding-left: 26px;
+      max-width: 74ch;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .tl-item {
+      position: relative;
+      padding-bottom: 36px;
+    }
+
+    .tl-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--text-dim);
+    }
+
+    .tl-item.current::before {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .tl-role {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tl-role h3 {
+      font-size: 1.12rem;
+    }
+
+    .tl-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      border: 1px solid var(--accent-dim);
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .tl-org {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 3px;
+    }
+
+    .tl-desc {
+      margin-top: 10px;
+      color: #c7cbd3;
+      font-size: 0.96rem;
+      max-width: 64ch;
+    }
+
+    /* ---------- WORK ---------- */
+    .featured {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 6px;
+      background: var(--panel);
+    }
+
+    @media (min-width:820px) {
+      .featured {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .featured-visual {
+      background: var(--panel-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width:820px) {
+      .featured-visual {
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+      }
+    }
+
+    .featured-body {
+      padding: 28px;
+    }
+
+    .featured-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .featured h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .featured p {
+      color: #c7cbd3;
+      font-size: 0.98rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 11px;
+    }
+
+    .honor {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 0;
+    }
+
+    .honor-num {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      width: 20px;
+      flex-shrink: 0;
+    }
+
+    .worklist {
+      margin-top: 36px;
+    }
+
+    .work-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 22px 0;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    @media (min-width:760px) {
+      .work-row {
+        grid-template-columns: 200px 1fr;
+        gap: 32px;
+      }
+    }
+
+    .work-row h3 {
+      font-size: 1.05rem;
+    }
+
+    .work-meta {
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      margin-top: 4px;
+    }
+
+    .work-row p {
+      color: #c7cbd3;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* ---------- RECOGNITION ---------- */
+    .rec-list {
+      max-width: 74ch;
+    }
+
+    .rec-item {
+      padding: 20px 0;
+      border-top: 1px solid var(--border-soft);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    @media (min-width:760px) {
+      .rec-item {
+        grid-template-columns: 170px 1fr;
+        gap: 28px;
+      }
+    }
+
+    .rec-when {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .rec-item h3 {
+      font-size: 1.02rem;
+    }
+
+    .rec-item p {
+      margin-top: 6px;
+      color: #c7cbd3;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skill-groups {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width:700px) {
+      .skill-groups {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .skill-group h3 {
+      font-size: 0.82rem;
+      font-family: 'IBM Plex Mono', monospace;
+      color: var(--text-dim);
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+
+    .skill-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-group li {
+      padding: 9px 0;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.96rem;
+      color: #dfe2e8;
+    }
+
+    .skill-group li:last-child {}
+
+    /* ---------- CONTACT ---------- */
+    section.contact {
+      border-bottom: none;
+      padding-bottom: 80px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width:800px) {
+      .contact-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: end;
+      }
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      max-width: 16ch;
+    }
+
+    .contact p.lede {
+      color: var(--text-muted);
+      margin-top: 14px;
+      max-width: 48ch;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.98rem;
+      transition: color .15s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--accent);
+    }
+
+    .contact-link .label {
+      color: var(--text-dim);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+    }
+
+    footer {
+      padding: 26px 0 40px;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site">
+    <nav class="wrap">
+      <div class="brand"><span class="dot"></span>Victor</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="btn btn-ghost" style="padding:8px 16px; font-size:0.85rem;">Get in touch</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Senior Mobile Engineer — Flutter &amp; Native Android</div>
+        <h1>Seven years of building mobile software people actually depend on.</h1>
+        <p class="lede">I design and ship production mobile systems — payment SDKs, real-time dispatch, offline-first
+          education tools — currently as a senior Flutter developer at Dayout Technologies. My work has reached riders,
+          delivery customers, and out-of-school children across Nigeria.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">See the work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="console">
+        <div class="console-head">
+          <span>dispatch / active-route</span>
+          <span class="live"><span class="pulse"></span>online</span>
+        </div>
+        <svg class="route-svg" viewBox="0 0 400 130" preserveAspectRatio="none" role="img"
+          aria-label="Illustrative multi-stop delivery route">
+          <path class="route-path" d="M20,100 C90,30 140,110 200,55 C250,10 300,90 380,35" />
+          <circle class="route-node" cx="20" cy="100" r="5" />
+          <circle class="route-node" cx="200" cy="55" r="5" />
+          <circle class="route-node end" cx="380" cy="35" r="6" />
+        </svg>
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat-num num">7+</div>
+            <div class="stat-label">Years shipping production mobile apps</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num num">15k+</div>
+            <div class="stat-label">Users across ride-hailing &amp; delivery</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num num">13</div>
+            <div class="stat-label">Person team led to a Microsoft award</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num num">10k+</div>
+            <div class="stat-label">Users on a fintech SDK across two cities</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>About</h2>
+        <div class="desc"></div>
+      </div>
+      <div class="about-text">
+        <p>I'm a Flutter engineer with unusually deep native Android roots — I got there by writing Kotlin and Swift
+          modules and bridging them into Flutter through platform channels, so I'm as comfortable in the native layer as
+          I am in the cross-platform one. That combination has carried me through fintech, ride-hailing, edtech,
+          healthtech, and consumer apps over the past seven years.</p>
+        <p>I'm currently a senior Flutter developer at Dayout Technologies, working remotely. Outside of shipping, I
+          lead technical teams, mentor engineers coming up through Google Developer community programs, and stay drawn
+          to projects that put technology in front of communities that don't usually get it first.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Experience</h2>
+        <div class="desc">Native Android roots, now leading Flutter product work.</div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item current">
+          <div class="tl-role">
+            <h3>Senior Flutter Developer</h3>
+            <span class="tl-tag">current</span>
+          </div>
+          <div class="tl-org">Dayout Technologies — Remote, Delaware, USA</div>
+          <div class="tl-desc">Building and maintaining Dayout's Flutter product, owning features end to end and shaping
+            architectural conventions for the codebase.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-role">
+            <h3>Flutter &amp; Native Android Engineer</h3>
+          </div>
+          <div class="tl-org">GoCaby — Fintech &amp; Ride-hailing</div>
+          <div class="tl-desc">Built the GoPay payment SDK, scaling it to 10,000+ users across Abuja and Lagos. Shipped
+            GoRide and GoDelivery with real-time tracking and multi-stop dispatch, reaching 15,000+ riders and
+            customers. Wrote Kotlin and Swift modules bridged into Flutter via platform channels for native-level
+            performance where it mattered.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Selected work</h2>
+        <div class="desc">Products shipped across fintech, mobility, edtech, and healthtech.</div>
+      </div>
+
+      <div class="featured">
+        <div class="featured-visual">
+          <div class="featured-eyebrow">Community impact · Microsoft #Build2030</div>
+          <h3 style="margin-bottom:0;">Allon Fasaha</h3>
+          <p style="margin-top:10px;">A blended offline/online literacy and numeracy app built for out-of-school
+            children in Northern Nigeria.</p>
+        </div>
+        <div class="featured-body">
+          <p>I served as project manager and developer on a 13-person team building Allon Fasaha — an app designed to
+            bring literacy and numeracy to children who are out of the formal school system. It works offline-first for
+            areas with unreliable connectivity, includes Hausa audio pronunciation so children can learn in their own
+            language, and pairs learning with a guardian employment incentive program to keep families engaged. The
+            project won the Microsoft #Build2030 Hackathon for Community Impact in 2022.</p>
+          <div class="chip-row">
+            <span class="chip">Offline-first</span>
+            <span class="chip">Hausa audio</span>
+            <span class="chip">Guardian incentive program</span>
+            <span class="chip">13-person team</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="worklist">
+        <div class="work-row">
+          <div>
+            <h3>GoRide &amp; GoDelivery</h3>
+            <div class="work-meta">Ride-hailing &amp; delivery</div>
+          </div>
+          <p>Real-time tracking and multi-stop dispatch for a ride-hailing and delivery platform, reaching 15,000+
+            users.</p>
+        </div>
+        <div class="work-row">
+          <div>
+            <h3>GoPay SDK</h3>
+            <div class="work-meta">Fintech</div>
+          </div>
+          <p>Payment SDK at GoCaby, scaled to 10,000+ users across Abuja and Lagos.</p>
+        </div>
+        <div class="work-row">
+          <div>
+            <h3>OjaNett</h3>
+            <div class="work-meta">Consumer / marketplace</div>
+          </div>
+          <p>A Flutter marketplace app connecting Nigerian artisans with buyers.</p>
+        </div>
+        <div class="work-row">
+          <div>
+            <h3>Steamledge AI Tutor</h3>
+            <div class="work-meta">Edtech</div>
+          </div>
+          <p>Mobile engineering on an AI-powered tutoring product.</p>
+        </div>
+        <div class="work-row">
+          <div>
+            <h3>Medping</h3>
+            <div class="work-meta">Healthtech</div>
+          </div>
+          <p>Mobile engineering on a healthtech product.</p>
+        </div>
+        <div class="work-row">
+          <div>
+            <h3>Piremit &amp; EduCarts</h3>
+            <div class="work-meta">Fintech</div>
+          </div>
+          <p>Additional fintech products built earlier in my career.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="recognition">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Recognition &amp; community</h2>
+        <div class="desc">Leadership beyond the codebase.</div>
+      </div>
+      <div class="rec-list">
+        <div class="rec-item">
+          <div class="rec-when">2022</div>
+          <div>
+            <h3>Microsoft #Build2030 Hackathon — Community Impact winner</h3>
+            <p>Won as project manager and developer on Allon Fasaha, leading a 13-person team building for underserved
+              communities in Northern Nigeria.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <div class="rec-when">Undergrad</div>
+          <div>
+            <h3>Lead Organiser, Google Developer Student Clubs (GDSC)</h3>
+            <p>Ran 10+ technical sessions spanning Cloud, Mobile, AI/ML, and Web3 for a student developer community.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <div class="rec-when">Ongoing</div>
+          <div>
+            <h3>Speaker &amp; Mentor, GDG on Campus</h3>
+            <p>Speaking and mentoring on Android and Flutter development for the wider Google Developer Group community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Stack</h2>
+        <div class="desc">What I build with day to day.</div>
+      </div>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Cross-platform</h3>
+          <ul>
+            <li>Flutter &amp; Dart</li>
+            <li>State management &amp; app architecture</li>
+            <li>Offline-first design</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Native</h3>
+          <ul>
+            <li>Kotlin &amp; Android</li>
+            <li>Swift</li>
+            <li>Platform channel bridging</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Systems &amp; leadership</h3>
+          <ul>
+            <li>Real-time tracking &amp; dispatch</li>
+            <li>Payment SDK integration</li>
+            <li>Technical team leadership</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Let's build something that holds up.</h2>
+        <p class="lede">Open to senior and lead mobile engineering roles — reach out directly or find me on the links
+          below.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:hello@example.com">
+          <span>hello@example.com</span>
+          <span class="label">email</span>
+        </a>
+        <a class="contact-link" href="#">
+          <span>LinkedIn</span>
+          <span class="label">profile</span>
+        </a>
+        <a class="contact-link" href="#">
+          <span>GitHub</span>
+          <span class="label">code</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div>Victor — Senior Mobile Engineer</div>
+    <div>Built with Flutter, mostly.</div>
+  </footer>
+
+</body>
+
+</html>
