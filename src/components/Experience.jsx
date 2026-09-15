@@ -40,8 +40,8 @@ const TIMELINE = [
   },
   {
     role: 'Software Developer',
-    org: 'Freelance & Early Career — Nigeria',
-    period: '2019 — 2022',
+    org: 'Steamledge Limited — Onsite, Nigeria',
+    period: 'Jul 2019 — Oct 2022',
     desc: 'Built CovidVent, a COVID-19 tracker app, and the frontend for an inventory management system and a midwives accreditation platform. Started as a Software Developer Trainee, and taught kids basic programming as a STEM educator during a summer bootcamp.',
   },
 ]
