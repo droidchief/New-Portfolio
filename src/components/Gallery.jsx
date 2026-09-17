@@ -1,5 +1,6 @@
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import Recognition from './Recognition.jsx'
 
 const MOMENTS = [
   {
@@ -73,6 +74,8 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+      <Recognition />
 
       <Footer />
     </>
