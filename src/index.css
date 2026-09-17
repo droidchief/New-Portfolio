@@ -839,8 +839,12 @@ a.gal-card:hover .gal-content h3{ color:var(--accent); }
 .blog-tags{ margin-top:14px; }
 .blog-thumb-fallback{
   width:100%;
-  aspect-ratio:4/3;
+  aspect-ratio:21/9;
   background:linear-gradient(135deg, var(--panel-alt), var(--panel));
+}
+.blog-thumb img,
+.blog-thumb .blog-thumb-fallback{
+  aspect-ratio:21/9;
 }
 .blog-error, .blog-empty{
   color:var(--text-muted);

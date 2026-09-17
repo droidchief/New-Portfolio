@@ -65,7 +65,7 @@ export default function BlogList() {
             <div className="gal-grid">
               {articles.map((article) => (
                 <Link className="gal-card" key={article.id} to={`/blog/${article.slug}`}>
-                  <div className="gal-thumb">
+                  <div className="gal-thumb blog-thumb">
                     {article.cover_image ? (
                       <img src={article.cover_image} alt={article.title} loading="lazy" />
                     ) : (
