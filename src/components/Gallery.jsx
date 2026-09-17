@@ -31,7 +31,13 @@ export default function Gallery() {
       <Header />
 
       <section className="gal-hero">
-        <div className="wrap">
+        <div className="wrap blog-hero-wrap">
+          <div className="hero-hanging hero-hanging-right blog-hanging" aria-hidden="true">
+            <div className="hero-pendulum">
+              <span className="hero-rope"></span>
+              <span className="blog-sign">Do the hard stufff</span>
+            </div>
+          </div>
           <div className="kicker">The journey, in snapshots</div>
           <h1>Highlights</h1>
           <p className="lede">A few of the moments and milestones behind the work — in the order they happened.</p>

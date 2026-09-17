@@ -29,13 +29,7 @@ export default function BlogList() {
       <Header />
 
       <section className="gal-hero">
-        <div className="wrap blog-hero-wrap">
-          <div className="hero-hanging hero-hanging-right blog-hanging" aria-hidden="true">
-            <div className="hero-pendulum">
-              <span className="hero-rope"></span>
-              <span className="blog-sign">Do the hard stufff</span>
-            </div>
-          </div>
+        <div className="wrap">
           <div className="kicker">Thoughts, notes, write-ups</div>
           <h1>Blog</h1>
           <p className="lede">Posts syndicated from my dev.to profile.</p>
