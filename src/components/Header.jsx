@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { href: '/#recognition', label: 'Recognition' },
   { href: '/#contact', label: 'Contact' },
   { href: '/highlights', label: 'Highlights' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 export default function Header() {
