@@ -811,6 +811,31 @@ a.gal-card:hover .gal-content h3{ color:var(--accent); }
 }
 
 /* ---------- BLOG ---------- */
+.blog-hero-wrap{ position:relative; }
+.blog-hero-wrap .hero-hanging-right{
+  top:-40px;
+  right:8px;
+}
+.blog-hero-wrap .hero-hanging-right .hero-rope{ height:96px; }
+@media (min-width:760px){
+  .blog-hero-wrap .hero-hanging-right{ top:-58px; right:24px; }
+  .blog-hero-wrap .hero-hanging-right .hero-rope{ height:140px; }
+}
+.blog-sign{
+  display:inline-block;
+  margin-top:-2px;
+  padding:9px 16px;
+  background:var(--panel);
+  border:1px solid var(--accent-dim);
+  border-radius:8px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem;
+  font-weight:600;
+  letter-spacing:0.01em;
+  color:var(--accent);
+  white-space:nowrap;
+  box-shadow:0 10px 24px -10px rgba(0,0,0,0.65);
+}
 .blog-tags{ margin-top:14px; }
 .blog-thumb-fallback{
   width:100%;
